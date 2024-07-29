@@ -3,6 +3,7 @@
     --secondary-blue: #1B5A7C;
     --primary-pink: #E10285;
     --primary-yellow: #FEED01;
+    --seconday-grey: #FBF7F7;
     --white: #fffffc;
 }
 
@@ -16,7 +17,7 @@
     src: url("/assets/fonts/arista_pro/Arista-Pro-Fat-trial.ttf"), format("truetype");
 }
 
-h3, p, a {
+h3, h4, p, a {
     font-family: "Hind Siliguri", sans-serif;
 }
 
@@ -189,6 +190,127 @@ h1, h2{
     font-weight: 400;
 }
 
+/* mebership section and cards */
+
+.memberships {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2rem 1rem;
+    background-color: var(--primary-yellow);
+    gap: 2rem;
+}
+
+.memberships__wrapper {
+    box-sizing: border-box;
+    display: flex;
+    gap: 2rem;
+    overflow: hidden;
+    overflow-x: auto;
+    width: 100vw;
+    padding: 0 1rem;
+}
+
+.memberships__heading {
+    color: var(--primary-pink);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.memberships__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 22px;
+    box-sizing: border-box;
+    padding: 2rem 1rem;
+    min-width: 100%;
+}
+
+.memberships__type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--seconday-grey);
+    border-radius: 22px;
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 100%;
+}
+
+.memberships__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--secondary-blue);
+}
+
+.memberships__value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+}
+
+.memberships__price {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--primary-pink);
+}
+
+.memberships__rate {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-pink);
+}
+
+.memberships__agreement {
+    font-size: 1rem;
+    color: var(--secondary-blue);
+}
+
+.memberships__details_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.memberships__details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: .5rem;
+    gap: .5rem;
+}
+
+.details--secondary {
+    background-color: var(--seconday-grey);
+    border-radius: 4px;
+}
+
+.memberships__info {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--secondary-blue);
+}
+
+.bi-check-circle-fill {
+    color: var(--primary-pink) !important;
+    font-size: 1.75rem !important;
+}
+
+.bi-x-circle-fill {
+    color: var(--primary-pink) !important;
+    font-size: 1.75rem !important;
+}
+
 @media (max-width:576px) {
     .main-nav__list {
         display: none;
@@ -225,8 +347,8 @@ h1, h2{
         width: 4rem;
     }
 
-    .bi {
-        display: none;
+    .bi-x {
+        display: none !important;
     }
 
     .main-nav__button {
@@ -237,6 +359,10 @@ h1, h2{
         display: none !important;
         }
 
+    .memberships__wrapper {
+        width: 525px;
+        margin: auto;
+        }
 }
 
 @media (min-width:768px) {
@@ -245,8 +371,8 @@ h1, h2{
         width: 6rem;
     }
 
-    .bi {
-        display: none;
+    .bi-x {
+        display: none !important;
     }
 
     .main-nav__button {
@@ -257,5 +383,14 @@ h1, h2{
         clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
     }
     
+    .memberships__wrapper {
+        background-color: var(--white);
+        border-radius: 42px;
+        width: 100%;
+    }
+
+    .memberships__card {
+        min-width: auto;
+    }
 
 }
