@@ -46,6 +46,23 @@ h2 {
     cursor: pointer;
 }
 
+.button--secondary {
+    background-color: var(--primary-yellow);
+    color: var(--primary-pink);
+    border-radius: .25rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.button--secondary:hover {
+    background-color: var(--secondary-blue);
+    color: var(--primary-yellow);
+    border-radius: .25rem;
+    border: none;
+    cursor: pointer;
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -345,6 +362,38 @@ h2 {
     width: 100%;
 }
 
+.memberships__swipe-icon {
+    -webkit-animation: slide-right 2s ease-in-out infinite alternate-reverse both;
+    animation: slide-right 2s ease-in-out infinite alternate-reverse both;
+    width: 3rem;
+    position: absolute;
+    bottom: 95px;
+}
+
+@-webkit-keyframes slide-right {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+    }
+}
+
 .bi-check-circle-fill {
     color: var(--primary-pink) !important;
     font-size: 1.75rem !important;
@@ -357,6 +406,61 @@ h2 {
 
 .desktop {
     display: none;
+}
+
+/* CTA */
+
+.cta {
+    background-image: url(../assets/images/players-cta.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta__overlay {
+    background-color: #000000ab;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.cta__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    padding: 2rem 1rem;
+}
+
+.cta__logo {
+    height: 5rem;
+    width: 10rem;
+}
+
+.cta__heading {
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.cta__button-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1.5rem;
+}
+
+.cta__button {
+    font-size: 1.725rem;
+    padding: 1rem;
+    width: 100%;
 }
 
 @media (max-width:576px) {
@@ -414,6 +518,31 @@ h2 {
         width: 500px;
     }
 
+}
+
+@media (min-width:768px) {
+
+    .cta {
+        height: 320px;
+    }
+
+    .cta__heading {
+        font-size: 3.875rem;
+    }
+
+    .cta__content-wrapper {
+        padding: 0;
+    }
+
+    .cta__button-group {
+        flex-direction: row;
+    }
+
+    .cta__button {
+        text-wrap: nowrap;
+        padding: 1rem 2.5rem;
+    }
+    
 }
 
 @media (min-width:992px) {
