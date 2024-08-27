@@ -213,6 +213,18 @@ h2 {
     background-color: var(--white);
 }
 
+.offers__heading {
+    color: var(--primary-pink);
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.offers__card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+}
+
 .offers__card {
     display: flex;
     flex-direction: column;
@@ -226,11 +238,6 @@ h2 {
     background-color: var(--white);
 }
 
-.offers__heading {
-    color: var(--primary-pink);
-    text-align: center;
-    font-size: 2.25rem;
-}
 
 .offers__card__heading {
     font-size: 2rem;
@@ -576,6 +583,15 @@ h2 {
         border-radius: 8px;
     }
 
+    .offers {
+        padding: 2rem;
+    }
+
+    .offers__card-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
     .cta {
         height: 320px;
     }
@@ -603,6 +619,10 @@ h2 {
     .header__logo {
         height: 3rem;
         width: 6rem;
+    }
+
+    .offers__heading {
+        font-size: 3.875rem;
     }
 
     .mobile {
