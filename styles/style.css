@@ -166,24 +166,40 @@ h2 {
 
 /* Hero */
 
-.hero__background {
+.hero {
+    position: relative;
+}
+
+.hero__content-wrapper {
+    display: flex;
     background-color: var(--primary-blue);
+    padding: 2rem;
     box-sizing: border-box;
-    padding: 2rem 1rem;
+}
+
+
+.hero__image {
+    display: none;
+}
+
+.hero__heading-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    height: min-content;
+    gap: 2vw;
 }
 
 .hero__heading {
     font-family: "Arista";
     color: var(--primary-pink);
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    text-wrap: balance;
+    line-height: 1.152;
 }
 
 .hero__summary {
     color: #FFFFFF;
-    font-size: 1.125rem;
+    font-size: clamp(.75rem, 1.5vw, 1.5rem);
 }
 
 /* Offers section & Cards */
@@ -458,9 +474,9 @@ h2 {
 }
 
 .cta__button {
-    font-size: 1.725rem;
+    font-size: 1.5rem;
     padding: 1rem;
-    width: 100%;
+    width: 50%;
 }
 
 @media (max-width:576px) {
@@ -509,6 +525,36 @@ h2 {
         display: none !important;
     }
 
+    .hero__content-wrapper {
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        padding: 2rem;
+        gap: 7vw;
+    }
+
+    .hero__background {
+        background-color: var(--primary-blue);
+        box-sizing: border-box;
+        padding: 2rem 1rem;
+        display: flex;
+        gap: 1rem;
+        max-height: 585px;
+        height: 48vw;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+        width: 100%;
+    }
+
+    .hero__image {
+        display: inline-block;
+        height: 40vw;
+        border-radius: 22px;
+    }
+
     .memberships__wrapper {
         width: 525px;
         margin: auto;
@@ -521,6 +567,14 @@ h2 {
 }
 
 @media (min-width:768px) {
+
+    .hero__heading {
+        line-height: 1.152;
+    }
+
+    .hero__image {
+        border-radius: 8px;
+    }
 
     .cta {
         height: 320px;
@@ -542,7 +596,7 @@ h2 {
         text-wrap: nowrap;
         padding: 1rem 2.5rem;
     }
-    
+
 }
 
 @media (min-width:992px) {
@@ -574,10 +628,6 @@ h2 {
 
     .main-nav__button {
         padding: .5rem 2rem;
-    }
-
-    .hero__background {
-        clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
     }
 
     .memberships--mobile {
