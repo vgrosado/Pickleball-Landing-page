@@ -286,6 +286,19 @@ h2 {
     display: none;
 }
 
+.memberships__heading-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.memberships__summary {
+    text-align: center;
+    color: var(--secondary-blue);
+    font-weight: 300;
+    font-size: 1.125rem;
+}
+
 .memberships__heading {
     color: var(--primary-pink);
     font-size: 2.5rem;
@@ -481,7 +494,6 @@ h2 {
 .cta__button {
     font-size: 1.5rem;
     padding: 1rem;
-    width: 50%;
 }
 
 /* Amenities Section */
@@ -500,7 +512,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2vw;
+    gap: 4vw;
     margin-top: 2rem;
 }
 
@@ -513,7 +525,7 @@ h2 {
 .amenities__gallery-left {
     display: flex;
     flex-direction: column;
-    gap: 2vw;
+    gap: 4vw;
 }
 
 .amenities__gallery-right {
@@ -536,6 +548,8 @@ h2 {
     width: 100%;
     max-height: 95%;
     height: 100%;
+    object-fit: cover;
+    object-position: left;
 }
 
 @media (max-width:576px) {
@@ -674,6 +688,7 @@ h2 {
     .cta__button {
         text-wrap: nowrap;
         padding: 1rem 2.5rem;
+        width: 50%;
     }
 
     .amenities {
@@ -690,7 +705,6 @@ h2 {
         display: flex;
         flex-direction: column;
         width: 50%;
-        gap: 2vw;
     }
 
     .amenities__gallery-right {
