@@ -626,6 +626,90 @@ h2 {
     color: var(--white);
 }
 
+.footer {
+    background-color: #000000;
+    padding: 4rem 4rem 2rem 4rem;
+}
+
+.footer__logo {
+    width: 10rem;
+    height: 5rem;
+}
+
+.footer__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .75rem;
+    gap: 4vw;
+    width: 100%;
+}
+
+.footer__col-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.footer__menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 50%;
+    gap: 1rem;
+}
+
+.footer__heading {
+    color: var(--primary-yellow);
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.footer__menu-item>li {
+    color: white;
+    font-weight: 300;
+    list-style: none;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer__menu>a {
+    text-decoration: none;
+}
+
+.footer__menu-item>li:hover {
+    color: var(--primary-pink);
+}
+
+.footer__details {
+    color: white;
+    font-weight: 300;
+}
+
+.footer__location {
+    margin-bottom: .5rem;
+}
+
+.footer__contact {
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.footer__contact:hover {
+    color: var(--primary-pink);
+}
+
+.footer__icons {
+    display: flex;
+    gap: 2vw;
+}
+
+.footer__icons>a {
+    text-decoration: none;
+}
+
 @media (max-width:576px) {
     .main-nav__list {
         display: none;
@@ -806,7 +890,24 @@ h2 {
     .team__card {
         width: 25%;
     }
-    
+
+    .footer__content-wrapper {
+        flex-direction: row;
+    }
+
+    .footer__menu-item>li {
+        font-size: 1.125rem;
+    }
+
+    .footer__details {
+        font-size: 1.125rem;
+    }
+
+    .footer__contact {
+        font-size: 1.125rem;
+    }
+
+
 }
 
 @media (min-width:992px) {
