@@ -178,7 +178,7 @@ h2 {
 .hero__content-wrapper {
     display: flex;
     background-color: var(--primary-pink);
-    background-image: linear-gradient(to bottom, rgb(0 0 0 / 74%), rgb(0 0 0 / 69%)), url("assets/images/Dinko-hero.jpg");
+    background-image: linear-gradient(to bottom, rgb(0 0 0 / 74%), rgb(0 0 0 / 69%)), url("../assets/images/Dinko-hero.jpg");
     background-size: cover;
     background-position: top;
     padding: 2rem;
