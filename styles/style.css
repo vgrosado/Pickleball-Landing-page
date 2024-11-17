@@ -14,7 +14,7 @@
 
 @font-face {
     font-family: "Arista";
-    src: url("/assets/fonts/arista_pro/Arista-Pro-Fat-trial.ttf"), format("truetype");
+    src: url("assets/fonts/arista_pro/Arista-Pro-Fat-trial.ttf"), format("truetype");
 }
 
 h3,
